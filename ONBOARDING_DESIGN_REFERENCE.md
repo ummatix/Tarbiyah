@@ -274,3 +274,8 @@ There are **5 sequential steps** and **8 total questions**. There is **no condit
    * Register `/onboarding` and `/onboarding/profile` inside `<ProtectedRoute>` in `src/App.tsx` (keeping `/login`, `/register`, `/forgot-password`, `/reset-password`, and `/app` intact).
    * Verify `npm run typecheck`, `npm run build`, and responsive/scroll checks across all 7 viewport widths.
 
+4. **Step 4 — Build Unified Responsive Learner Profile Completion Screen (`src/pages/LearnerProfilePage.tsx` at `/onboarding/profile`):**
+   * Displays personalized greeting, archetype selector/badge, preferences recap with `Edit` action back to `/onboarding`, `Noor-ul-Bidayah` 3-milestone/phase preview, first lesson callout, and `Continue to Dashboard` (`/app`).
+5. **Step 5 — Route Wiring & QA:**
+   * Register `/onboarding` and `/onboarding/profile` inside `<ProtectedRoute>` in `src/App.tsx` (keeping `/login`, `/register`, `/forgot-password`, `/reset-password`, and `/app` intact).
+   * Verify `npm run typecheck`, `npm run build`, and responsive/scroll checks across all 7 viewport widths.
