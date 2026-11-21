@@ -283,3 +283,7 @@ Activated via `switchAuthMode('register')` when clicking `"Create Account"` tab 
 2. **Missing Forgot Password Flow:** Both Mobile and Desktop Login screens contain a `Forgot password?` / `Forgot Password?` link (`href="#"`), but **no Forgot Password screen exists in Stitch**. Plan a `/forgot-password` view matching the exact Tarbiyah auth card design when implementing Phase 1 auth.
 3. **Copy & Asset Alignment:** Standardize the community count (`25,000+` vs `45,000`), fix the broken `TARBIYAH` logo `<img>` URL, and replace the desktop companion image showing *"Welcome to Anara"*.
 
+### Recommended Phase 1 Routing & Gaps to Resolve
+1. **Dedicated Routes + Synchronized Tabs:** Map `/login` (Login view) and `/register` (Registration view) so both direct URLs, header nav links, segmented tabs, and bottom prompts navigate cleanly between the two states without dead `href="#"` links.
+2. **Missing Forgot Password Flow:** Both Mobile and Desktop Login screens contain a `Forgot password?` / `Forgot Password?` link (`href="#"`), but **no Forgot Password screen exists in Stitch**. Plan a `/forgot-password` view matching the exact Tarbiyah auth card design when implementing Phase 1 auth.
+3. **Copy & Asset Alignment:** Standardize the community count (`25,000+` vs `45,000`), fix the broken `TARBIYAH` logo `<img>` URL, and replace the desktop companion image showing *"Welcome to Anara"*.
