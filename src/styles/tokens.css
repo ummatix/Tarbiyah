@@ -1,0 +1,171 @@
+:root {
+  color-scheme: light;
+
+  /* Tarbiyah Learning System — Light Theme (Official Palette) */
+  --color-primary-rgb: 93 58 206;
+  --color-on-primary-rgb: 255 255 255;
+  --color-primary-container-rgb: 118 86 232;
+  --color-on-primary-container-rgb: 250 244 255;
+  --color-primary-fixed-rgb: 231 222 255;
+  --color-primary-fixed-dim-rgb: 203 190 255;
+  --color-on-primary-fixed-rgb: 30 0 96;
+  --color-on-primary-fixed-variant-rgb: 75 33 188;
+  --color-inverse-primary-rgb: 203 190 255;
+
+  --color-secondary-rgb: 0 92 189;
+  --color-on-secondary-rgb: 255 255 255;
+  --color-secondary-container-rgb: 70 143 255;
+  --color-on-secondary-container-rgb: 0 40 90;
+  --color-secondary-fixed-rgb: 215 226 255;
+  --color-secondary-fixed-dim-rgb: 172 199 255;
+  --color-on-secondary-fixed-rgb: 0 26 64;
+  --color-on-secondary-fixed-variant-rgb: 0 69 145;
+
+  --color-tertiary-rgb: 0 99 93;
+  --color-on-tertiary-rgb: 255 255 255;
+  --color-tertiary-container-rgb: 0 126 118;
+  --color-on-tertiary-container-rgb: 207 255 249;
+  --color-tertiary-fixed-rgb: 112 248 236;
+  --color-tertiary-fixed-dim-rgb: 78 219 207;
+  --color-on-tertiary-fixed-rgb: 0 32 30;
+  --color-on-tertiary-fixed-variant-rgb: 0 80 75;
+
+  --color-surface-rgb: 252 248 255;
+  --color-surface-dim-rgb: 219 216 235;
+  --color-surface-bright-rgb: 252 248 255;
+  --color-surface-tint-rgb: 99 65 212;
+  --color-surface-variant-rgb: 228 224 243;
+  --color-surface-container-lowest-rgb: 255 255 255;
+  --color-surface-container-low-rgb: 246 242 255;
+  --color-surface-container-rgb: 239 235 255;
+  --color-surface-container-high-rgb: 234 230 249;
+  --color-surface-container-highest-rgb: 228 224 243;
+
+  --color-background-rgb: 252 248 255;
+  --color-on-background-rgb: 27 26 40;
+  --color-on-surface-rgb: 27 26 40;
+  --color-on-surface-variant-rgb: 72 69 84;
+  --color-inverse-surface-rgb: 48 47 61;
+  --color-inverse-on-surface-rgb: 243 238 255;
+
+  --color-outline-rgb: 121 117 134;
+  --color-outline-variant-rgb: 202 196 215;
+
+  --color-error-rgb: 186 26 26;
+  --color-on-error-rgb: 255 255 255;
+  --color-error-container-rgb: 255 218 214;
+  --color-on-error-container-rgb: 147 0 10;
+
+  /* Semantic Showcase, Selection, CTA & Glass Tokens (Light) */
+  --color-showcase-start-rgb: 245 242 255;
+  --color-showcase-end-rgb: 237 232 254;
+  --color-cta-start-rgb: 118 86 232;
+  --color-cta-end-rgb: 70 143 255;
+  --color-selected-surface-rgb: 118 86 232;
+  --color-on-selected-surface-rgb: 250 244 255;
+  --color-selected-muted-rgb: 250 244 255;
+  --color-selected-accent-rgb: 112 248 236;
+  --color-selected-icon-bg-rgb: 255 255 255;
+  --color-media-scrim-rgb: 48 47 61;
+  --color-on-media-rgb: 255 255 255;
+  --color-on-media-accent-rgb: 215 226 255;
+  --color-glass-surface-rgb: 255 255 255;
+  --color-glass-border-rgb: 202 196 215;
+
+  /* Semantic Elevation & Accent Shadows (Light) */
+  --shadow-header: 0 1px 8px rgba(41, 36, 92, 0.04);
+  --shadow-footer: 0 1px 8px rgba(0, 0, 0, 0.02);
+  --shadow-tabs: 0 2px 10px rgba(41, 36, 92, 0.08);
+  --shadow-card: 0 4px 20px rgba(41, 36, 92, 0.04);
+  --shadow-elevated: 0 14px 40px rgba(41, 36, 92, 0.07);
+  --shadow-dock: 0 -4px 20px rgba(41, 36, 92, 0.07);
+  --shadow-primary-cta: 0 8px 24px rgba(118, 86, 232, 0.32);
+  --shadow-selected: 0 4px 20px rgba(118, 86, 232, 0.24);
+}
+
+html.dark,
+:root.dark,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Tarbiyah Learning System — Dark Theme ("Serene Midnight Sanctuary") */
+  --color-primary-rgb: 234 203 131;
+  --color-on-primary-rgb: 23 19 10;
+  --color-primary-container-rgb: 215 180 99;
+  --color-on-primary-container-rgb: 20 16 8;
+  --color-primary-fixed-rgb: 43 37 24;
+  --color-primary-fixed-dim-rgb: 181 148 73;
+  --color-on-primary-fixed-rgb: 245 223 171;
+  --color-on-primary-fixed-variant-rgb: 234 203 131;
+  --color-inverse-primary-rgb: 93 58 206;
+
+  --color-secondary-rgb: 138 168 222;
+  --color-on-secondary-rgb: 13 16 26;
+  --color-secondary-container-rgb: 64 93 145;
+  --color-on-secondary-container-rgb: 242 234 217;
+  --color-secondary-fixed-rgb: 30 43 68;
+  --color-secondary-fixed-dim-rgb: 64 93 145;
+  --color-on-secondary-fixed-rgb: 199 216 247;
+  --color-on-secondary-fixed-variant-rgb: 138 168 222;
+
+  --color-tertiary-rgb: 99 199 188;
+  --color-on-tertiary-rgb: 9 30 28;
+  --color-tertiary-container-rgb: 36 122 114;
+  --color-on-tertiary-container-rgb: 223 255 250;
+  --color-tertiary-fixed-rgb: 27 59 57;
+  --color-tertiary-fixed-dim-rgb: 78 166 156;
+  --color-on-tertiary-fixed-rgb: 156 240 230;
+  --color-on-tertiary-fixed-variant-rgb: 99 199 188;
+
+  --color-surface-rgb: 13 16 26;
+  --color-surface-dim-rgb: 9 12 20;
+  --color-surface-bright-rgb: 26 32 48;
+  --color-surface-tint-rgb: 234 203 131;
+  --color-surface-variant-rgb: 48 54 71;
+  --color-surface-container-lowest-rgb: 26 32 48;
+  --color-surface-container-low-rgb: 21 26 40;
+  --color-surface-container-rgb: 33 40 59;
+  --color-surface-container-high-rgb: 39 46 66;
+  --color-surface-container-highest-rgb: 48 54 71;
+
+  --color-background-rgb: 13 16 26;
+  --color-on-background-rgb: 242 234 217;
+  --color-on-surface-rgb: 242 234 217;
+  --color-on-surface-variant-rgb: 199 192 181;
+  --color-inverse-surface-rgb: 242 234 217;
+  --color-inverse-on-surface-rgb: 13 16 26;
+
+  --color-outline-rgb: 143 149 168;
+  --color-outline-variant-rgb: 48 54 71;
+
+  --color-error-rgb: 255 180 171;
+  --color-on-error-rgb: 105 0 5;
+  --color-error-container-rgb: 92 25 30;
+  --color-on-error-container-rgb: 255 218 214;
+
+  /* Semantic Showcase, Selection, CTA & Glass Tokens (Dark) */
+  --color-showcase-start-rgb: 19 24 38;
+  --color-showcase-end-rgb: 28 35 54;
+  --color-cta-start-rgb: 234 203 131;
+  --color-cta-end-rgb: 215 180 99;
+  --color-selected-surface-rgb: 37 45 68;
+  --color-on-selected-surface-rgb: 242 234 217;
+  --color-selected-muted-rgb: 199 192 181;
+  --color-selected-accent-rgb: 234 203 131;
+  --color-selected-icon-bg-rgb: 234 203 131;
+  --color-media-scrim-rgb: 8 10 18;
+  --color-on-media-rgb: 242 234 217;
+  --color-on-media-accent-rgb: 234 203 131;
+  --color-glass-surface-rgb: 26 32 48;
+  --color-glass-border-rgb: 48 54 71;
+
+  /* Semantic Elevation & Accent Shadows (Dark) */
+  --shadow-header: 0 1px 12px rgba(0, 0, 0, 0.35), inset 0 -1px 0 rgba(48, 54, 71, 0.8);
+  --shadow-footer: 0 -1px 0 rgba(48, 54, 71, 0.75);
+  --shadow-tabs: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 8px 28px rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(48, 54, 71, 0.85);
+  --shadow-elevated: 0 18px 46px rgba(0, 0, 0, 0.48), 0 0 0 1px rgba(48, 54, 71, 0.9);
+  --shadow-dock: 0 -6px 24px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(48, 54, 71, 0.9);
+  --shadow-primary-cta: 0 8px 24px rgba(234, 203, 131, 0.22);
+  --shadow-selected: 0 6px 22px rgba(0, 0, 0, 0.36), 0 0 0 1px rgba(234, 203, 131, 0.6);
+}

@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: rgb(var(--color-surface-rgb));
+    color: rgb(var(--color-on-surface-rgb));
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    -webkit-tap-highlight-color: transparent;
+    transition:
+      background-color 200ms ease,
+      color 200ms ease;
+  }
+
+  /* Ensure native select dropdown options stay legible in both Light and Dark themes */
+  select option {
+    background-color: rgb(var(--color-surface-container-lowest-rgb));
+    color: rgb(var(--color-on-surface-rgb));
+  }
+
+  /* Prevent bright white/yellow browser autofill rectangles in Dark Mode */
+  :root.dark input:-webkit-autofill,
+  :root.dark input:-webkit-autofill:hover,
+  :root.dark input:-webkit-autofill:focus,
+  :root.dark select:-webkit-autofill,
+  html.dark input:-webkit-autofill,
+  html.dark input:-webkit-autofill:hover,
+  html.dark input:-webkit-autofill:focus,
+  html.dark select:-webkit-autofill {
+    -webkit-text-fill-color: rgb(var(--color-on-surface-rgb));
+    -webkit-box-shadow: 0 0 0 1000px rgb(var(--color-surface-container-low-rgb)) inset;
+    caret-color: rgb(var(--color-primary-rgb));
+    transition: background-color 9999s ease-out 0s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .theme-transition-safe {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
