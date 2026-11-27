@@ -14,10 +14,10 @@ import { Link } from 'react-router-dom';
 import { ThemeSwitcher } from '../../../components/ui/ThemeSwitcher';
 import { useAuth } from '../../auth/hooks/useAuth';
 import {
-  DESKTOP_NAV_ITEMS,
   MOBILE_NAV_ITEMS,
   type NavItemId,
 } from '../data/dashboardContent';
+import { DesktopSidebar } from './desktop/DesktopSidebar';
 
 const NAV_ICONS: Record<NavItemId, ReactNode> = {
   home: <Home className="h-[18px] w-[18px]" />,
@@ -79,72 +79,15 @@ export function DashboardShell({ children, displayName }: DashboardShellProps) {
   return (
     <div className="flex min-h-screen bg-surface text-on-surface antialiased">
       {/* Desktop Left Sidebar (>=1024px) */}
-      <aside
-        aria-label="Primary"
-        className="hidden border-r border-outline-variant/45 bg-surface-container-low/55 dark:border-outline-variant/80 dark:bg-surface-container-low lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-64 lg:shrink-0 lg:flex-col lg:justify-between lg:px-5 lg:py-7"
-      >
-        <div>
-          <div className="mb-8 flex items-center gap-2.5 px-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-on-primary shadow-sm">
-              <Sparkles className="h-4 w-4" />
-            </div>
-            <span className="font-heading text-title-md font-bold tracking-wider text-on-surface">
-              TARBIYAH
-            </span>
-          </div>
-
-          <nav aria-label="Dashboard navigation" className="flex flex-col gap-1">
-            {DESKTOP_NAV_ITEMS.map((item) => {
-              if (item.implemented) {
-                return (
-                  <Link
-                    aria-current="page"
-                    className="flex items-center gap-3 rounded-lg bg-surface-container px-3 py-2.5 font-label-lg text-label-lg font-semibold text-primary transition-colors dark:bg-surface-container-high"
-                    key={item.id}
-                    to="/app"
-                  >
-                    <span aria-hidden="true">{NAV_ICONS[item.id]}</span>
-                    <span>{item.label}</span>
-                  </Link>
-                );
-              }
-
-              return (
-                <button
-                  aria-disabled="true"
-                  className="flex w-full cursor-not-allowed items-center justify-between gap-2 rounded-lg px-3 py-2.5 text-left font-body-md text-body-md text-on-surface-variant/65"
-                  disabled
-                  key={item.id}
-                  title="Coming in an upcoming milestone"
-                  type="button"
-                >
-                  <span className="flex items-center gap-3">
-                    <span aria-hidden="true">{NAV_ICONS[item.id]}</span>
-                    <span>{item.label}</span>
-                  </span>
-                  <span className="font-label-sm text-label-sm text-outline">Soon</span>
-                </button>
-              );
-            })}
-          </nav>
-        </div>
-
-        <div className="border-t border-outline-variant/40 pt-4 dark:border-outline-variant/75">
-          <Link
-            className="flex items-center gap-2.5 rounded-lg px-3 py-2 font-body-sm text-body-sm text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
-            to="/onboarding"
-          >
-            <SlidersHorizontal className="h-4 w-4 text-outline" />
-            <span>Update preferences</span>
-          </Link>
-        </div>
-      </aside>
+      <div className="hidden lg:flex">
+        <DesktopSidebar />
+      </div>
 
       {/* Main Content Area */}
-      <div className="flex min-w-0 flex-1 flex-col">
+      <div className="flex min-w-0 flex-1 flex-col bg-[#F5F2FF] dark:bg-surface">
         {/* Compact Top Header */}
         <header className="pt-safe sticky top-0 z-40 border-b border-outline-variant/35 bg-surface/85 backdrop-blur-xl dark:border-outline-variant/70 lg:static lg:border-b-0 lg:bg-transparent lg:pt-5 lg:backdrop-blur-none">
-          <div className="mx-auto flex h-16 w-full max-w-4xl items-center justify-between px-margin-mobile sm:px-margin lg:h-12 lg:px-10">
+          <div className="mx-auto flex h-16 w-full max-w-4xl items-center justify-between px-margin-mobile sm:px-margin lg:h-12 lg:max-w-[1120px] lg:px-8">
             {/* Mobile & Tablet Branding */}
             <div className="flex items-center gap-2 lg:hidden">
               <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-on-primary">
@@ -234,7 +177,7 @@ export function DashboardShell({ children, displayName }: DashboardShellProps) {
           </div>
         </header>
 
-        <main className="mx-auto w-full max-w-4xl flex-1 px-margin-mobile pb-28 pt-8 sm:px-margin sm:pt-10 lg:px-10 lg:pb-16 lg:pt-6">
+        <main className="mx-auto w-full max-w-4xl flex-1 px-margin-mobile pb-28 pt-8 sm:px-margin sm:pt-10 lg:max-w-[1120px] lg:px-8 lg:pb-16 lg:pt-6">
           {children}
         </main>
       </div>
